@@ -12,3 +12,5 @@ We use API Gateway and Lambda to create seven endpoints (RegisterActivity,LoginA
 We store the assets available for the portfolio in a table in DynamoDB. The portfolios themselves will also be stored in DynamoDB.
 
 CryptoPortfolioTracker also provides a web interface for users to manage their portfolios. A main page providing a list view will let them create new portfolios and link off to pages to update and view assets.
+
+P.S : This was a team project and my contribution to the project was implementing the backend code for VerifyActivity, CreatePortfolioActivity, GetPortfolioActivity, UpdatePortfolioActivity, GetTransactionActivity end points
