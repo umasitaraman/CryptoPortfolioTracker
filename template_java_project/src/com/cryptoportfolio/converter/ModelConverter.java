@@ -21,20 +21,20 @@ public class ModelConverter {
         Map<String, Double> portfolioAssetsMap = portfolio.getAssetQuantityMap();
 
         return PortfolioModel.builder()
-                .withUsername(username)
-                .withAssetQuantityMap(portfolioAssetsMap)
+                .username(username)
+                .assetQuantityMap(portfolioAssetsMap)
                 .build();
     }
 
     public TransactionModel toTransactionModel(Transaction transaction) {
 
         return TransactionModel.builder()
-                .withAssetId(transaction.getUsername())
-                .withTransactionDate(transaction.getTransactionDate())
-                .withAssetId(transaction.getAssetId())
-                .withAssetQuantity(transaction.getAssetQuantity())
-                .withTransactionValue(transaction.getTransactionValue())
-                .withTransactionType(transaction.getTransactionType())
+                .username(transaction.getUsername())
+                .transactionDate(transaction.getTransactionDate())
+                .assetId(transaction.getAssetId())
+                .assetQuantity(transaction.getAssetQuantity())
+                .transactionValue(transaction.getTransactionValue())
+                .transactionType(transaction.getTransactionType())
                 .build();
     }
 

@@ -116,7 +116,7 @@ is used to get a list of assetId's with the specific quantity associated with ea
 |----------------|---                     |---               |
 |username   |                       |Get portfolio with username|
 |assetQuantityMap|As a customer, I want to view a portfolio holding all my assets with value converted to USD|Get assetId and quantity| 
-|           |                       |
+
 
 
 ### DynamoDB Indexes

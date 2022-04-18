@@ -96,7 +96,7 @@ public class CreatePortfolioActivity implements RequestHandler<CreatePortfolioRe
         }
 
         return CreatePortfolioResponse.builder()
-                .withMessage("Portfolio created successfully")
+                .message("Portfolio created successfully")
                 .build();
     }
 

@@ -1,0 +1,3 @@
+aws cloudformation create-stack --region us-east-2 --stack-name cryptoportfoliotracker-createtables --template-body file://template_java_project/configurations/tables.template.yml --capabilities CAPABILITY_IAM
+aws dynamodb batch-write-item --request-items file://template_java_project/configurations/Settings_Batch1.json
+aws dynamodb batch-write-item --request-items file://template_java_project/configurations/Settings_Batch2.json

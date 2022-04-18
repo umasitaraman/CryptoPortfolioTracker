@@ -1,0 +1,229 @@
+{
+  "settings": [
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "bitcoin"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "ethereum"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "tether"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "binancecoin"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "usd-coin"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "ripple"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "cardano"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "solana"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "avalanche-2"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "terra-luna"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "polkadot"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "dogecoin"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "binance-usd"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "shiba-inu"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "matic-network"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "crypto-com-chain"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "terrausd"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "wrapped-bitcoin"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "dai"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "cosmos"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "litecoin"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "chainlink"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "near"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "tron"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "ftx-token"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -10,45 +10,6 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.cryptoportfolio.exceptions.AuthenticationException;
 
 public class Auth {
-
-    public static VerificationStatus verifyToken(String username, String token) {
-
-        if (null == username || "".equals(username) || null == token || "".equals(token)) {
-            return VerificationStatus.builder()
-                    .withVerified(false)
-                    .withMessage("[Unauthorized] Authentication Failed : Username and token required")
-                    .build();
-        }
-
-        try {
-            Algorithm algorithm = Algorithm.HMAC256(System.getenv("JWT_SECRET"));
-            JWTVerifier verifier = JWT.require(algorithm)
-                    .withIssuer("cryptoportfolio")
-                    .withClaim("username", username)
-                    .build(); //Reusable verifier instance
-            DecodedJWT jwt = verifier.verify(token);
-        } catch (TokenExpiredException e) {
-            return VerificationStatus.builder()
-                    .withVerified(false)
-                    .withMessage("[Unauthorized] Authentication Failed : Token expired")
-                    .build();
-        } catch (JWTVerificationException e) {
-            return VerificationStatus.builder()
-                    .withVerified(false)
-                    .withMessage("[Unauthorized] Authentication Failed : Verification failed")
-                    .build();
-        }
-
-        return VerificationStatus.builder()
-                .withVerified(true)
-                .withMessage("Verification succeeded")
-                .build();
-    }
-
-    public static VerificationStatus verifyRequest(String username, APIGatewayProxyRequestEvent request) {
-        return verifyToken(username, request.getHeaders().get("token"));
-    }
-
     public static void authenticateToken(String username, String token) {
         if (null == username || "".equals(username) || null == token || "".equals(token)) {
             throw new AuthenticationException("[Unauthorized] Authentication Failed : username and token required");

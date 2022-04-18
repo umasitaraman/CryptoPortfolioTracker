@@ -33,7 +33,6 @@ ul {
     color: #6bfc03;
 }
 
-
 #alignpage {
     padding-left: 5px;
 }
@@ -101,19 +100,14 @@ ul {
             #7918f2 48%,
             #4801ff 100%
     );
-    /*color: #e2e2e2;*/
     color: #fff;
 }
-
-/*.inner::placeholder {*/
-/*    color: #e2e2e2;*/
-/*}*/
 
 .assetlist-image {
     width: 40px;
 }
 
-.coinlist-item {
+.assetlist-item {
     display: flex;
     background-color: #1a1a1c;
 }

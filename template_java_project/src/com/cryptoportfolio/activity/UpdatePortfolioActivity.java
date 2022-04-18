@@ -96,7 +96,7 @@ public class UpdatePortfolioActivity implements RequestHandler<UpdatePortfolioRe
         }
 
         return UpdatePortfolioResponse.builder()
-                .withMessage("Portfolio updated")
+                .message("Portfolio updated")
                 .build();
     }
 

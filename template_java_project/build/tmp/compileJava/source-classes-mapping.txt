@@ -4,10 +4,10 @@ com/cryptoportfolio/exceptions/MissingFieldException.java
  com.cryptoportfolio.exceptions.MissingFieldException
 com/cryptoportfolio/models/requests/CreatePortfolioRequest.java
  com.cryptoportfolio.models.requests.CreatePortfolioRequest
- com.cryptoportfolio.models.requests.CreatePortfolioRequest$Builder
+ com.cryptoportfolio.models.requests.CreatePortfolioRequest$CreatePortfolioRequestBuilder
 com/cryptoportfolio/models/responses/RegisterResponse.java
  com.cryptoportfolio.models.responses.RegisterResponse
- com.cryptoportfolio.models.responses.RegisterResponse$Builder
+ com.cryptoportfolio.models.responses.RegisterResponse$RegisterResponseBuilder
 com/cryptoportfolio/activity/VerifyActivity.java
  com.cryptoportfolio.activity.VerifyActivity
 com/cryptoportfolio/lambda/LoginActivityProvider.java
@@ -16,14 +16,14 @@ com/cryptoportfolio/exceptions/UnableToSaveToDatabaseException.java
  com.cryptoportfolio.exceptions.UnableToSaveToDatabaseException
 com/cryptoportfolio/models/requests/UpdatePortfolioRequest.java
  com.cryptoportfolio.models.requests.UpdatePortfolioRequest
- com.cryptoportfolio.models.requests.UpdatePortfolioRequest$Builder
+ com.cryptoportfolio.models.requests.UpdatePortfolioRequest$UpdatePortfolioRequestBuilder
 com/cryptoportfolio/dynamodb/dao/AssetDao.java
  com.cryptoportfolio.dynamodb.dao.AssetDao
 com/cryptoportfolio/dynamodb/models/Transaction.java
  com.cryptoportfolio.dynamodb.models.Transaction
 com/cryptoportfolio/models/responses/UpdatePortfolioResponse.java
  com.cryptoportfolio.models.responses.UpdatePortfolioResponse
- com.cryptoportfolio.models.responses.UpdatePortfolioResponse$Builder
+ com.cryptoportfolio.models.responses.UpdatePortfolioResponse$UpdatePortfolioResponseBuilder
 com/cryptoportfolio/activity/UpdatePortfolioActivity.java
  com.cryptoportfolio.activity.UpdatePortfolioActivity
 com/cryptoportfolio/utils/Auth.java
@@ -32,18 +32,18 @@ com/cryptoportfolio/CoingeckoAPITest.java
  com.cryptoportfolio.CoingeckoAPITest
 com/cryptoportfolio/activity/CreatePortfolioActivity.java
  com.cryptoportfolio.activity.CreatePortfolioActivity
-com/cryptoportfolio/utils/Utils.java
- com.cryptoportfolio.utils.Utils
 com/cryptoportfolio/exceptions/CryptoPortfolioException.java
  com.cryptoportfolio.exceptions.CryptoPortfolioException
 com/cryptoportfolio/models/requests/RegisterRequest.java
  com.cryptoportfolio.models.requests.RegisterRequest
+ com.cryptoportfolio.models.requests.RegisterRequest$RegisterRequestBuilder
 com/cryptoportfolio/lambda/GetPortfolioActivityProvider.java
  com.cryptoportfolio.lambda.GetPortfolioActivityProvider
 com/cryptoportfolio/exceptions/PortfolioAlreadyExistsException.java
  com.cryptoportfolio.exceptions.PortfolioAlreadyExistsException
 com/cryptoportfolio/models/requests/VerifyRequest.java
  com.cryptoportfolio.models.requests.VerifyRequest
+ com.cryptoportfolio.models.requests.VerifyRequest$VerifyRequestBuilder
 com/cryptoportfolio/lambda/CreatePortfolioActivityProvider.java
  com.cryptoportfolio.lambda.CreatePortfolioActivityProvider
 com/cryptoportfolio/exceptions/LoginException.java
@@ -60,86 +60,87 @@ com/cryptoportfolio/exceptions/AuthenticationException.java
  com.cryptoportfolio.exceptions.AuthenticationException
 com/cryptoportfolio/activity/GetTransactionsActivity.java
  com.cryptoportfolio.activity.GetTransactionsActivity
-com/cryptoportfolio/dependency/DaoModule.java
- com.cryptoportfolio.dependency.DaoModule
 com/cryptoportfolio/models/PortfolioModel.java
  com.cryptoportfolio.models.PortfolioModel
- com.cryptoportfolio.models.PortfolioModel$Builder
+ com.cryptoportfolio.models.PortfolioModel$PortfolioModelBuilder
 com/cryptoportfolio/lambda/UpdatePortfolioActivityProvider.java
  com.cryptoportfolio.lambda.UpdatePortfolioActivityProvider
 com/cryptoportfolio/utils/VerificationStatus.java
  com.cryptoportfolio.utils.VerificationStatus
  com.cryptoportfolio.utils.VerificationStatus$Builder
-com/cryptoportfolio/exceptions/InsufficientAssetsException.java
- com.cryptoportfolio.exceptions.InsufficientAssetsException
 com/cryptoportfolio/exceptions/PortfolioNotFoundException.java
  com.cryptoportfolio.exceptions.PortfolioNotFoundException
+com/cryptoportfolio/exceptions/InsufficientAssetsException.java
+ com.cryptoportfolio.exceptions.InsufficientAssetsException
 com/cryptoportfolio/dynamodb/dao/PortfolioDao.java
  com.cryptoportfolio.dynamodb.dao.PortfolioDao
 com/cryptoportfolio/exceptions/AssetNotFoundException.java
  com.cryptoportfolio.exceptions.AssetNotFoundException
-com/cryptoportfolio/dependency/ServiceComponent.java
- com.cryptoportfolio.dependency.ServiceComponent
 com/cryptoportfolio/models/AssetModel.java
  com.cryptoportfolio.models.AssetModel
- com.cryptoportfolio.models.AssetModel$Builder
+ com.cryptoportfolio.models.AssetModel$AssetModelBuilder
 com/cryptoportfolio/activity/RegisterActivity.java
  com.cryptoportfolio.activity.RegisterActivity
 com/cryptoportfolio/lambda/RegisterActivityProvider.java
  com.cryptoportfolio.lambda.RegisterActivityProvider
 com/cryptoportfolio/models/responses/CreatePortfolioResponse.java
  com.cryptoportfolio.models.responses.CreatePortfolioResponse
- com.cryptoportfolio.models.responses.CreatePortfolioResponse$Builder
+ com.cryptoportfolio.models.responses.CreatePortfolioResponse$CreatePortfolioResponseBuilder
 com/cryptoportfolio/models/requests/LoginRequest.java
  com.cryptoportfolio.models.requests.LoginRequest
+ com.cryptoportfolio.models.requests.LoginRequest$LoginRequestBuilder
 com/cryptoportfolio/activity/LoginActivity.java
  com.cryptoportfolio.activity.LoginActivity
-com/cryptoportfolio/dynamodb/dao/TransactionDao.java
- com.cryptoportfolio.dynamodb.dao.TransactionDao
 com/cryptoportfolio/dynamodb/models/Portfolio.java
  com.cryptoportfolio.dynamodb.models.Portfolio
+com/cryptoportfolio/dynamodb/dao/TransactionDao.java
+ com.cryptoportfolio.dynamodb.dao.TransactionDao
 com/cryptoportfolio/lambda/CoinGeckoConnectorProvider.java
  com.cryptoportfolio.lambda.CoinGeckoConnectorProvider
 com/cryptoportfolio/models/TransactionModel.java
  com.cryptoportfolio.models.TransactionModel
- com.cryptoportfolio.models.TransactionModel$Builder
+ com.cryptoportfolio.models.TransactionModel$TransactionModelBuilder
 com/cryptoportfolio/converter/ModelConverter.java
  com.cryptoportfolio.converter.ModelConverter
 com/cryptoportfolio/activity/GetPortfolioActivity.java
  com.cryptoportfolio.activity.GetPortfolioActivity
 com/cryptoportfolio/models/responses/FailureResponse.java
  com.cryptoportfolio.models.responses.FailureResponse
+ com.cryptoportfolio.models.responses.FailureResponse$FailureResponseBuilder
 com/cryptoportfolio/lambda/CoinGeckoConnector.java
  com.cryptoportfolio.lambda.CoinGeckoConnector
 com/cryptoportfolio/settings/Settings.java
  com.cryptoportfolio.settings.Settings
+com/cryptoportfolio/lambda/CoinGeckoConnector.java
+ com.cryptoportfolio.lambda.CoinGeckoConnector
 com/cryptoportfolio/exceptions/UserNotFoundException.java
  com.cryptoportfolio.exceptions.UserNotFoundException
 com/cryptoportfolio/models/responses/GetTransactionsResponse.java
  com.cryptoportfolio.models.responses.GetTransactionsResponse
- com.cryptoportfolio.models.responses.GetTransactionsResponse$Builder
+ com.cryptoportfolio.models.responses.GetTransactionsResponse$GetTransactionsResponseBuilder
 com/cryptoportfolio/models/responses/GetPortfolioResponse.java
  com.cryptoportfolio.models.responses.GetPortfolioResponse
- com.cryptoportfolio.models.responses.GetPortfolioResponse$Builder
+ com.cryptoportfolio.models.responses.GetPortfolioResponse$GetPortfolioResponseBuilder
 com/cryptoportfolio/dynamodb/models/Asset.java
  com.cryptoportfolio.dynamodb.models.Asset
 com/cryptoportfolio/dynamodb/DynamoDbClientProvider.java
  com.cryptoportfolio.dynamodb.DynamoDbClientProvider
 com/cryptoportfolio/models/requests/GetTransactionsRequest.java
  com.cryptoportfolio.models.requests.GetTransactionsRequest
- com.cryptoportfolio.models.requests.GetTransactionsRequest$Builder
+ com.cryptoportfolio.models.requests.GetTransactionsRequest$GetTransactionsRequestBuilder
 com/cryptoportfolio/models/UserModel.java
  com.cryptoportfolio.models.UserModel
+ com.cryptoportfolio.models.UserModel$UserModelBuilder
 com/cryptoportfolio/models/responses/LoginResponse.java
  com.cryptoportfolio.models.responses.LoginResponse
- com.cryptoportfolio.models.responses.LoginResponse$Builder
+ com.cryptoportfolio.models.responses.LoginResponse$LoginResponseBuilder
 com/cryptoportfolio/exceptions/AssetNotAvailableException.java
  com.cryptoportfolio.exceptions.AssetNotAvailableException
 com/cryptoportfolio/lambda/GetTransactionsActivityProvider.java
  com.cryptoportfolio.lambda.GetTransactionsActivityProvider
 com/cryptoportfolio/models/responses/VerifyResponse.java
  com.cryptoportfolio.models.responses.VerifyResponse
- com.cryptoportfolio.models.responses.VerifyResponse$Builder
+ com.cryptoportfolio.models.responses.VerifyResponse$VerifyResponseBuilder
 com/cryptoportfolio/models/requests/GetPortfolioRequest.java
  com.cryptoportfolio.models.requests.GetPortfolioRequest
- com.cryptoportfolio.models.requests.GetPortfolioRequest$Builder
+ com.cryptoportfolio.models.requests.GetPortfolioRequest$GetPortfolioRequestBuilder

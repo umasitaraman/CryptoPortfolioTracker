@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
-import axios from 'axios';
 import {NavLink, useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 
-const registerAPIUrl = 'https://ccixqpmq4c.execute-api.us-east-2.amazonaws.com/prod/register';
+const registerAPIUrl = 'https://r6z0a5xu3f.execute-api.us-east-2.amazonaws.com/prod/register/';
+=======
+import axios from '../apis/cryptoPortfolio';
+import {APIKey} from "../apis/apiKey";
+>>>>>>> main
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -10,17 +14,21 @@ const Register = () => {
     const [message, setMessage] = useState(null);
     const navigate = useNavigate();
 
-    const submitHandler = (event) => {
+    const submitHandler = () => {
         const requestConfig = {
             headers: {
-                'x-api-key': '9zsZhasE01a9hxGo92WUr68aGSvllMBN6Q3FHmBI'
+<<<<<<< HEAD
+                'x-api-key': 'Lg6TGbdNQBTq3IMNsQ9c5dCFEUpgXQS5IG5o7RZ5'
+=======
+                'x-api-key': APIKey
+>>>>>>> main
             }
         }
         const requestBody = {
             username: username,
             password: password
         }
-        axios.post(registerAPIUrl, requestBody, requestConfig).then(response => {
+        axios.post('/register/', requestBody, requestConfig).then(response => {
             setMessage('Registration Successful');
             navigate('/login');
         }).catch(error => {

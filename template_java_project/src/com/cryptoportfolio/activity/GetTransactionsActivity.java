@@ -63,7 +63,7 @@ public class GetTransactionsActivity implements RequestHandler<GetTransactionsRe
         List<TransactionModel> transactionModelList = new ModelConverter().toTransactionModelList(transactions);
 
         return GetTransactionsResponse.builder()
-                .withTransactions(transactionModelList)
+                .transactions(transactionModelList)
                 .build();
     }
 }

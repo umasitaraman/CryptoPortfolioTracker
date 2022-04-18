@@ -1,9 +1,15 @@
 import React, {useState} from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 import axios from 'axios';
 import {setUserSession} from '../service/AuthService';
 
-const loginAPIUrl = 'https://ccixqpmq4c.execute-api.us-east-2.amazonaws.com/prod/login';
+const loginAPIUrl = 'https://r6z0a5xu3f.execute-api.us-east-2.amazonaws.com/prod/login/';
+=======
+import {setUserSession} from '../service/authService';
+import axios from '../apis/cryptoPortfolio';
+import {APIKey} from "../apis/apiKey";
+>>>>>>> main
 
 const Login = (props) => {
     const [username, setUsername] = useState('');
@@ -14,7 +20,11 @@ const Login = (props) => {
     const submitHandler = (event) => {
         const requestConfig = {
             headers: {
-                'x-api-key': '9zsZhasE01a9hxGo92WUr68aGSvllMBN6Q3FHmBI'
+<<<<<<< HEAD
+                'x-api-key': 'Lg6TGbdNQBTq3IMNsQ9c5dCFEUpgXQS5IG5o7RZ5'
+=======
+                'x-api-key': APIKey
+>>>>>>> main
             }
         }
         const requestBody = {
@@ -22,7 +32,7 @@ const Login = (props) => {
             password: password
         }
 
-        axios.post(loginAPIUrl, requestBody, requestConfig).then((response) => {
+        axios.post('/login', requestBody, requestConfig).then((response) => {
             setUserSession(response.data.username, response.data.authToken, response.data.newUser);
             console.log("newUser: " + response.data.newUser);
             console.log("typeof newUser: " + typeof response.data.newUser);

@@ -1,0 +1,229 @@
+{
+  "settings": [
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "algorand"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "bitcoin-cash"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "staked-ether"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "okb"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "stellar"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "leo-token"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "fantom"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "uniswap"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "decentraland"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "hedera-hashgraph"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "internet-computer"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "the-sandbox"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "axie-infinity"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "ethereum-classic"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "elrond-erd-2"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "vechain"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "theta-token"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "filecoin"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "ecomi"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "tezos"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "klay-token"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "monero"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "compound-ether"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "cdai"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "master_assets": {
+            "S": "the-graph"
+          }
+        }
+      }
+    }
+  ]
+}

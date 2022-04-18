@@ -69,7 +69,7 @@ public class GetPortfolioActivity implements RequestHandler<GetPortfolioRequest,
         PortfolioModel portfolioModel = new ModelConverter().toPortfolioModel(username, portfolio);
 
         return GetPortfolioResponse.builder()
-                .withPortfolio(portfolioModel)
+                .portfolio(portfolioModel)
                 .build();
     }
 }

@@ -59,10 +59,10 @@ public class LoginActivity implements RequestHandler<LoginRequest, LoginResponse
                 .withExpiresAt(expiry)
                 .sign(algorithm);
 
-        return new LoginResponse.Builder()
-                .withUsername(username)
-                .withAuthToken(token)
-                .withIsNewUser(isNewUser)
+        return LoginResponse.builder()
+                .username(username)
+                .authToken(token)
+                .isNewUser(isNewUser)
                 .build();
     }
 }

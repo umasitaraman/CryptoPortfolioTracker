@@ -53,6 +53,7 @@ dependencies {
 
     implementation "com.google.dagger:dagger:2.15"
     annotationProcessor"com.google.dagger:dagger-compiler:2.15"
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
     // https://mvnrepository.com/artifact/org.testng/testng
     implementation group: 'org.testng', name: 'testng', version: '6.14.3'
@@ -82,6 +83,9 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-api:[2.17.1,)'
     implementation 'org.apache.logging.log4j:log4j-core:[2.17.1,)'
     implementation 'org.apache.logging.log4j:log4j-slf4j18-impl:[2.17.1,)'
+
+    //implement lombok
+    compileOnly('org.projectlombok:lombok:1.16.20')
 
 
 }

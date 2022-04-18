@@ -60,8 +60,8 @@ public class RegisterActivity implements RequestHandler<RegisterRequest, Registe
 
         userDao.createUser(user);
 
-        return new RegisterResponse.Builder()
-                .withUsername(username)
+        return RegisterResponse.builder()
+                .username(username)
                 .build();
     }
 }

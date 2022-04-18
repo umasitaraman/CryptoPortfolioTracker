@@ -33,9 +33,9 @@ public class VerifyActivity implements RequestHandler<VerifyRequest, VerifyRespo
 
         Auth.authenticateToken(username, token);
 
-        return new VerifyResponse.Builder()
-                .withUsername(username)
-                .withToken(token)
+        return VerifyResponse.builder()
+                .username(username)
+                .authToken(token)
                 .build();
     }
 }
