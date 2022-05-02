@@ -1,5 +1,6 @@
-# Crypto Portfolio Tracker
+# Added the spring implementation of the endpoints
 
+# Crypto Portfolio Tracker
 
 Crypto assets are digital tokens secured through a decentralized computer network. Owning several crypto 
 assets can be difficult to track and view overall value and performance.
@@ -18,7 +19,6 @@ handle the creation, update, and retrieval of portfolio to satisfy our requireme
 We store the user profile, portfolio, and transaction history in DynamoBD tables where we also designed
 a GSI schema and attribute projection that optimizes queries for the transactions.
 
-Crypto Portfolio Tracker also provides a web interface for users to manage their portfolio. After a user 
-registers and creates a portfolio, the main portfolio page provides a list view of assets and displays a 
-chart with asset information, portfolio percentages and total value. The user is also able to update their 
-portfolio and view transaction history.
+CryptoPortfolioTracker also provides a web interface for users to manage their portfolios. A main page providing a list view will let them create new portfolios and link off to pages to update and view assets.
+
+P.S : This was a team project and my contribution to the project was implementing the backend code for VerifyActivity, CreatePortfolioActivity, GetPortfolioActivity, UpdatePortfolioActivity, GetTransactionActivity end points
