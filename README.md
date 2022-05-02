@@ -1,6 +1,3 @@
-# Added the spring implementation of the endpoints
-# 05/01/2022 - Added error Handling in spring Using "ErrorResponse" and "ControllerAdvice" classes
-
 # Crypto Portfolio Tracker
 
 Crypto assets are digital tokens secured through a decentralized computer network. Owning several crypto 
@@ -22,4 +19,10 @@ a GSI schema and attribute projection that optimizes queries for the transaction
 
 CryptoPortfolioTracker also provides a web interface for users to manage their portfolios. A main page providing a list view will let them create new portfolios and link off to pages to update and view assets.
 
-P.S : This was a team project and my contribution to the project was implementing the backend code for VerifyActivity, CreatePortfolioActivity, GetPortfolioActivity, UpdatePortfolioActivity, GetTransactionActivity end points
+P.S : This was a team project and my contribution to the project was implementing the backend code for CreatePortfolioActivity, GetPortfolioActivity, UpdatePortfolioActivity, GetTransactionActivity end points
+
+
+# 04/18/2022 - Added the spring implementation for all the endpoints (RegisterActivity, LoginActivity, VerifyActivity, 
+CreatePortfolioActivity, GetPortfolioActivity, UpdatePortfolioActivity, GetTransactionActivity)
+
+# 05/01/2022 - Added error Handling in spring Using "ErrorResponse" and "ControllerAdvice" classes
