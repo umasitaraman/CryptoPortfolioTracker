@@ -2,6 +2,8 @@ package com.cryptoportfolio.exceptions;
 
 public class AssetNotFoundException extends CryptoPortfolioException {
 
+    private static final long serialVersionUID = -8094038823757030313L;
+
     public AssetNotFoundException() {
         super();
     }

@@ -2,6 +2,8 @@ package com.cryptoportfolio.exceptions;
 
 public class TransactionsNotFoundException extends CryptoPortfolioException {
 
+    private static final long serialVersionUID = 5895295420839662082L;
+
     public TransactionsNotFoundException() {
         super();
     }

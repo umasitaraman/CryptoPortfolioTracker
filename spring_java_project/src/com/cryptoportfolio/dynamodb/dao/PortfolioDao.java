@@ -27,7 +27,7 @@ public class PortfolioDao {
         Portfolio portfolio = this.dynamoDBMapper.load(Portfolio.class, username);
 
         if (portfolio == null) {
-            throw new PortfolioNotFoundException("[Not Found] Resource not found : Could not find portfolio for the user :  " + username);
+            throw new PortfolioNotFoundException("Resource not found : Could not find portfolio for the user :  " + username);
         }
         return portfolio;
     }
@@ -42,7 +42,7 @@ public class PortfolioDao {
             this.dynamoDBMapper.save(portfolio);
         } catch (Exception e){
             //logger.log(e.toString());
-            throw new UnableToSaveToDatabaseException("[Internal Server Error] Failed : Unable to service request");
+            throw new UnableToSaveToDatabaseException("Failed : Unable to service request");
         }
     }
 }

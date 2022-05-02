@@ -2,6 +2,8 @@ package com.cryptoportfolio.exceptions;
 
 public class AuthenticationException extends CryptoPortfolioException {
 
+    private static final long serialVersionUID = -1177295121879474831L;
+
     public AuthenticationException() {
         super();
     }

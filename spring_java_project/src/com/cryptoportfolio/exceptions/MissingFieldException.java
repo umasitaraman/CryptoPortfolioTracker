@@ -2,6 +2,8 @@ package com.cryptoportfolio.exceptions;
 
 public class MissingFieldException extends CryptoPortfolioException {
 
+    private static final long serialVersionUID = -990657388741455981L;
+
     public MissingFieldException() {
         super();
     }

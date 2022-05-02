@@ -22,9 +22,9 @@ public class Auth {
                     .build(); //Reusable verifier instance
             DecodedJWT jwt = verifier.verify(token);
         } catch (TokenExpiredException e) {
-            throw new AuthenticationException("[Unauthorized] Authentication Failed : token expired");
+            throw new AuthenticationException("Authentication Failed : token expired");
         } catch (JWTVerificationException e) {
-            throw new AuthenticationException("[Unauthorized] Authentication Failed : token could not be verified");
+            throw new AuthenticationException("Authentication Failed : token could not be verified");
         }
     }
 }

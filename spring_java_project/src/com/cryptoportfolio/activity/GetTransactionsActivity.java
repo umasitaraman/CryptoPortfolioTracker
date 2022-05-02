@@ -56,7 +56,7 @@ public class GetTransactionsActivity {
         List<Transaction> transactions = transactionDao.getTransactions(username, assetFlag);
 
         if (transactions == null) {
-            throw new TransactionsNotFoundException("[Not Found] Resource not found : Could not find Transaction History");
+            throw new TransactionsNotFoundException("Resource not found : Could not find Transaction History");
         }
 
         List<TransactionModel> transactionModelList = new ModelConverter().toTransactionModelList(transactions);

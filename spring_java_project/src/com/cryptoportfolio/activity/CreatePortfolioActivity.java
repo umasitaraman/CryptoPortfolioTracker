@@ -59,6 +59,9 @@ public class CreatePortfolioActivity {
     public CreatePortfolioResponse execute (final CreatePortfolioRequest createPortfolioRequest) {
         //LambdaLogger logger = context.getLogger();
         //logger.log(gson.toJson(createPortfolioRequest));
+        if (createPortfolioRequest.getTransactions() == null || createPortfolioRequest.getAssetQuantityMap() == null) {
+            throw new AssetNotAvailableException("Resource not found : Asset(s) unavailable");
+        }
         List<Transaction> transactionList = new ArrayList<>(createPortfolioRequest.getTransactions());
 
         Auth.authenticateToken(createPortfolioRequest.getUsername(), createPortfolioRequest.getAuthToken());
@@ -67,10 +70,11 @@ public class CreatePortfolioActivity {
         Map<String, Double> assetQuantityMap = createPortfolioRequest.getAssetQuantityMap();
 
         if (!Settings.AVAILABLE_ASSETS.containsAll(assetQuantityMap.keySet())) {
-            throw new AssetNotAvailableException("[Not Found] Resource not found : Asset(s) unavailable");
+            throw new AssetNotAvailableException("Resource not found : Asset(s) unavailable");
         }
 
         User user = userDao.getUser(createPortfolioRequest.getUsername());
+
 
         user.setIsNewUser(false);
         userDao.updateUser(user);
@@ -92,7 +96,7 @@ public class CreatePortfolioActivity {
             portfolioDao.savePortfolio(portfolio);
         } catch (DynamoDBMappingException e) {
             //logger.log(e.toString());
-            throw new UnableToSaveToDatabaseException("[Internal Server Error] Failed : Unable to service request");
+            throw new UnableToSaveToDatabaseException("Failed : Unable to service request");
         }
 
         return CreatePortfolioResponse.builder()

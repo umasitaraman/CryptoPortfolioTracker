@@ -2,6 +2,8 @@ package com.cryptoportfolio.exceptions;
 
 public class UnableToSaveToDatabaseException extends CryptoPortfolioException {
 
+    private static final long serialVersionUID = -6616000570371503635L;
+
     public UnableToSaveToDatabaseException() {
         super();
     }

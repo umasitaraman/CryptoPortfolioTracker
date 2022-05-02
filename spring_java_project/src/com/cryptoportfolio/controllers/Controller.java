@@ -5,6 +5,7 @@ import com.cryptoportfolio.activity.*;
 import com.cryptoportfolio.dependency.ServiceComponent;
 import com.cryptoportfolio.dynamodb.models.Transaction;
 import com.cryptoportfolio.dynamodb.models.User;
+import com.cryptoportfolio.exceptions.MissingFieldException;
 import com.cryptoportfolio.models.requests.*;
 import com.cryptoportfolio.models.responses.LoginResponse;
 import com.cryptoportfolio.models.responses.RegisterResponse;
