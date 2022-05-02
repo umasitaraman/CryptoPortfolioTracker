@@ -2,6 +2,8 @@ package com.cryptoportfolio.exceptions;
 
 public class InsufficientAssetsException extends CryptoPortfolioException {
 
+    private static final long serialVersionUID = -8514699126880544783L;
+
     public InsufficientAssetsException() {
         super();
     }

@@ -33,18 +33,18 @@ public class RegisterActivity {
         String password = registerRequest.getPassword();
 
         if (null == username || "".equals(username) || null == password || "".equals(password)) {
-            throw new MissingFieldException("[Bad Request] Registration Failed : Username and password are required");
+            throw new MissingFieldException("Registration Failed : Username and password are required");
         }
 
         if (!VALID_USERNAME_PATTERN.matcher(username).find()) {
 
-            throw new IllegalArgumentException("[Bad Request] Registration Failed : Username Valid format: " +
+            throw new IllegalArgumentException("Registration Failed : Username Valid format: " +
                     "(a-zA-Z0-9) & " +
                     "max of 20 characters.");
         }
 
         if (!VALID_PASSWORD_PATTERN.matcher(password).find()) {
-            throw new IllegalArgumentException("[Bad Request] Registration Failed : Password Valid format:: " +
+            throw new IllegalArgumentException("Registration Failed : Password Valid format:: " +
                     "5 - 20 characters required.");
         }
 

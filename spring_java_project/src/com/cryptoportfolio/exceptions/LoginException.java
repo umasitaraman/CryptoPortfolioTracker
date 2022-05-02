@@ -2,6 +2,8 @@ package com.cryptoportfolio.exceptions;
 
 public class LoginException extends CryptoPortfolioException {
 
+    private static final long serialVersionUID = -9216264521484651899L;
+
     public LoginException() {
         super();
     }

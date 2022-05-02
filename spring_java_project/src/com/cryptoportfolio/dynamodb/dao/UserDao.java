@@ -18,7 +18,7 @@ public class UserDao {
 
     public void createUser(User user) {
         if (null != dynamoDBMapper.load(User.class, user.getUsername())) {
-            throw new UserAlreadyExistsException(String.format("[Bad Request] Registration Failed : user %s already exists", user.getUsername()));
+            throw new UserAlreadyExistsException(String.format("Registration Failed : user %s already exists", user.getUsername()));
         } else {
             dynamoDBMapper.save(user);
         }
@@ -30,7 +30,7 @@ public class UserDao {
             updateUser.setIsNewUser(false);
             dynamoDBMapper.save(user);
         } else {
-            throw new LoginException(String.format("[Unauthorized] Login Failed : user does not exist"));
+            throw new LoginException(String.format("Login Failed : user does not exist"));
         }
     }
 
@@ -38,7 +38,7 @@ public class UserDao {
 
         User user = dynamoDBMapper.load(User.class, username);
         if (null == user) {
-            throw new LoginException(String.format("[Unauthorized] Login Failed : user %s does not exist", username));
+            throw new LoginException(String.format("Login Failed : user %s does not exist", username));
         }
 
         return user;

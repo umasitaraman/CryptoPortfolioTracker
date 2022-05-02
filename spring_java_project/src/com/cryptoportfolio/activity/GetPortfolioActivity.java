@@ -61,7 +61,7 @@ public class GetPortfolioActivity  {
         Portfolio portfolio = portfolioDao.getPortfolio(username);
 
         if (portfolio == null) {
-            throw new PortfolioNotFoundException("[Not Found] Resource not found : Could not find Portfolio");
+            throw new PortfolioNotFoundException("Resource not found : Could not find Portfolio");
         }
 
         PortfolioModel portfolioModel = new ModelConverter().toPortfolioModel(username, portfolio);

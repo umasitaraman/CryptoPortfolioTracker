@@ -2,6 +2,8 @@ package com.cryptoportfolio.exceptions;
 
 public class PortfolioAlreadyExistsException extends CryptoPortfolioException {
 
+    private static final long serialVersionUID = -7949257669437613643L;
+
     public PortfolioAlreadyExistsException() {
         super();
     }

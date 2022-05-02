@@ -6,6 +6,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.PaginatedQueryList;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.cryptoportfolio.dynamodb.models.Transaction;
 import com.cryptoportfolio.exceptions.MissingFieldException;
+import com.cryptoportfolio.exceptions.TransactionsNotFoundException;
 import com.cryptoportfolio.exceptions.UnableToSaveToDatabaseException;
 
 import javax.inject.Inject;
@@ -32,7 +33,7 @@ public class TransactionDao {
      */
     public List<Transaction> getTransactions(String username, String assetFlag) {
         if (assetFlag == null) {
-            throw new MissingFieldException("[Bad Request] Asset Flag cannot be null");
+            throw new MissingFieldException("Asset Flag cannot be null");
         } else if (assetFlag.equalsIgnoreCase("ALL")) {
             Transaction event = new Transaction();
             event.setUsername(username);
@@ -53,6 +54,9 @@ public class TransactionDao {
                 .withExpressionAttributeValues(valueMap);
 
         PaginatedQueryList<Transaction> transactionList = dynamoDBMapper.query(Transaction.class, queryExpression);
+        if(transactionList.isEmpty()) {
+            throw new TransactionsNotFoundException("Resource not found : Could not find Transaction History");
+        }
         return transactionList;
     }
 
@@ -67,7 +71,7 @@ public class TransactionDao {
             try {
                 dynamoDBMapper.save(transaction);
             } catch (Exception e) {
-                throw new UnableToSaveToDatabaseException("[Internal Server Error] Failed : Unable to service request");
+                throw new UnableToSaveToDatabaseException("Failed : Unable to service request");
             }
         }
     }

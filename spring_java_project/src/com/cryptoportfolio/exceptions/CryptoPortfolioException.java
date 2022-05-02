@@ -1,6 +1,9 @@
 package com.cryptoportfolio.exceptions;
 
 public class CryptoPortfolioException extends RuntimeException {
+
+    private static final long serialVersionUID = 8645139362142502053L;
+
     public CryptoPortfolioException() {
         super();
     }

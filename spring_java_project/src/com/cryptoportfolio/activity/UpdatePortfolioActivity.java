@@ -63,6 +63,10 @@ public class UpdatePortfolioActivity {
 //        LambdaLogger logger = context.getLogger();
 //        logger.log(gson.toJson(updatePortfolioRequest));
 
+        if (updatePortfolioRequest.getTransactions() == null || updatePortfolioRequest.getAssetQuantityMap() == null) {
+            throw new AssetNotAvailableException("Resource not found : Asset(s) unavailable");
+        }
+
         Auth.authenticateToken(updatePortfolioRequest.getUsername(), updatePortfolioRequest.getAuthToken());
 
         List<Transaction> transactionList = new ArrayList<Transaction>(updatePortfolioRequest.getTransactions());
@@ -71,7 +75,7 @@ public class UpdatePortfolioActivity {
         Map<String, Double> assetQuantityMap = updatePortfolioRequest.getAssetQuantityMap();
 
         if (!Settings.AVAILABLE_ASSETS.containsAll(assetQuantityMap.keySet())) {
-            throw new AssetNotAvailableException("[Not Found] Resource not found : Asset(s) unavailable");
+            throw new AssetNotAvailableException("Resource not found : Asset(s) unavailable");
         }
 
         portfolio.setUsername(updatePortfolioRequest.getUsername());
@@ -92,7 +96,7 @@ public class UpdatePortfolioActivity {
         try {
             portfolioDao.savePortfolio(portfolio);
         } catch (DynamoDBMappingException e) {
-            throw new UnableToSaveToDatabaseException("[Internal Server Error] Failed : Unable to service request");
+            throw new UnableToSaveToDatabaseException("Failed : Unable to service request");
         }
 
         return UpdatePortfolioResponse.builder()
