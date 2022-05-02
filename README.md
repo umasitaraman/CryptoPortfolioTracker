@@ -1,4 +1,5 @@
 # Added the spring implementation of the endpoints
+# 05/01/2022 - Added error Handling in spring Using "ErrorResponse" and "ControllerAdvice" classes
 
 # Crypto Portfolio Tracker
 
